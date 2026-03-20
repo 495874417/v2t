@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>技术支持 - 语音转文字</title>
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --line: rgba(255,255,255,.14);
+      --accent: #7aa7ff;
+      --accent2: #66f0d4;
+      --shadow: rgba(0,0,0,.35);
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 700px at 15% 10%, rgba(122,167,255,.22), transparent 60%),
+        radial-gradient(900px 600px at 85% 30%, rgba(102,240,212,.16), transparent 55%),
+        linear-gradient(180deg, #070a14 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    header{
+      padding: 22px 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px var(--shadow);
+    }
+    h1{ margin: 0 0 6px; font-size: 26px; letter-spacing: .2px; }
+    .sub{ margin:0; color: var(--muted); line-height: 1.55; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+      .span2{ grid-column: 1 / -1; }
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 16px;
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: rgba(255,255,255,.92);
+    }
+    ul{ margin: 8px 0 0; padding-left: 18px; }
+    li{ margin: 6px 0; color: var(--muted); line-height: 1.6; }
+    p{ margin: 10px 0; color: var(--muted); line-height: 1.7; }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .faq details{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    summary{
+      cursor: pointer;
+      font-weight: 600;
+      color: rgba(255,255,255,.90);
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .pill{
+      display:inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .cta{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.92);
+      text-decoration:none;
+    }
+    .btn strong{ font-size: 13px; }
+    .btn .hint{ color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>技术支持</h1>
+      <p class="sub">
+        这里提供常见问题与排查建议，帮助你更顺利使用 <strong>语音转文字</strong>。
+        若仍无法解决，请查看“联系我们”获取支持。
+      </p>
+      <div class="pill">支持：实时语音转文字 / 音频文件转文字</div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>快速开始</h2>
+        <p>首次使用前，请确保已授予麦克风权限；随后即可在应用内选择“实时语音转写”或“音频文件转文字”。</p>
+        <ul>
+          <li>实时语音：尽量在安静环境说话，避免远离麦克风。</li>
+          <li>音频转文字：使用应用内上传入口导入你的音频文件。</li>
+          <li>如果出现识别效果不理想，可尝试调整语言/口音设置（如页面中提供）。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>常见问题</h2>
+        <div class="faq">
+          <details>
+            <summary>为什么无法识别/一直转写失败？</summary>
+            <p>请先检查麦克风权限、网络连接（如需要），以及文件是否成功导入。必要时重启应用后再次尝试。</p>
+          </details>
+          <details>
+            <summary>实时转写声音总是不准，怎么优化？</summary>
+            <p>建议靠近设备麦克风，减少背景噪音；说话速度保持自然；尽量在同一语言环境下进行。</p>
+          </details>
+          <details>
+            <summary>音频转文字无法完成/结果为空？</summary>
+            <p>确认音频文件已成功上传且时长在合理范围内；若仍失败，可更换为其他音频格式或重新导出后再试。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="card span2">
+        <h2>故障排除清单</h2>
+        <ul>
+          <li>麦克风权限未开启：iOS 系统设置中允许该应用访问麦克风。</li>
+          <li>网络不稳定：切换到更稳定的网络后重试。</li>
+          <li>音频文件问题：检查文件是否损坏、是否能在系统播放器中正常播放。</li>
+          <li>识别延迟：大型音频或较长片段可能需要更久，请耐心等待完成。</li>
+        </ul>
+      </section>
+
+      <section class="card span2">
+        <h2>联系我们</h2>
+        <p>你可以通过邮件获得支持。为了更快解决问题，请尽量提供：设备型号、系统版本、应用版本、你操作的步骤、以及必要的截图/错误提示。</p>
+        <div class="cta">
+          <a class="btn" href="mailto:support@geeker.net.cn?subject=%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81&body=%E8%AE%BE%E5%A4%87%E5%9E%8B%E5%8F%B7%2F%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC%3A%0A%E5%BA%94%E7%94%A8%E7%89%88%E6%9C%AC%3A%0A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%3A%0A%E9%87%8D%E7%8F%8A%E6%AD%A5%E9%AA%A4%3A%0A%E6%88%AA%E5%9B%BE%2F%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%3A%0A">
+            <strong>支持邮箱</strong>
+            <span class="hint">support@geeker.net.cn</span>
+          </a>
+          <a class="btn" href="YOUR_REPO_URL/issues" target="_blank" rel="noopener">
+            <strong>提交反馈</strong>
+            <span class="hint">GitHub Issues（可选）</span>
+          </a>
+        </div>
+        <p style="margin-top:12px;">注：本页面为静态技术支持说明，不会自动收集个人信息；具体数据处理以你的应用隐私政策为准。</p>
+      </section>
+    </div>
+
+    <footer>
+      技术支持页面（GitHub Pages）| 更新日期：2026-03-20
+    </footer>
+  </div>
+</body>
+</html>
+
